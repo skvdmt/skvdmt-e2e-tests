@@ -2,6 +2,7 @@ package internal
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/skvdmt/chrome"
 )
@@ -51,7 +52,7 @@ func (a *App) Start() error {
 		expeced  string
 	}{
 		{"Main header", "#main_header", "Dmitry Skidanov"},
-		{"Profession", "#profession", "full stack engineer."},
+		{"Profession", "#profession", "Full stack engineer. Apps for high load."},
 		{"Second header", "#second_header", "Main technologies"},
 		{"Name Technology Go", "#technology_name_go", "Go"},
 		{"Name Technology Postgres", "#technology_name_postgres", "Postgres"},
@@ -63,8 +64,8 @@ func (a *App) Start() error {
 		{"Name Technology JavaScript", "#technology_name_javascript", "JavaScript"},
 		{"Name Technology Vue", "#technology_name_vue", "Vue"},
 		{"Examples header", "#examples_header", "Examples"},
-		{"Example title Chrome", "#example_name_chrome", "Golang Chrome DevTools protocol"},
-		{"Example title JWT", "#example_name_jwt", "JSON Web Tokens"},
+		{"Example title Chrome", "#example_name_chrome", "Golang Chrome driver"},
+		{"Example title JWT", "#example_name_jwt", "Golang JSON Web Tokens"},
 		{"Example title Auth", "#example_name_auth", "Authentication"},
 		{"Example title Home", "#example_name_home", "Homepage"},
 		{"Example title Telegram bot", "#example_name_tgbot", "Telegram bot"},
@@ -91,7 +92,7 @@ func (a *App) Start() error {
 		{"Link URL Telegram", "#link_url_telegram", "t.me/skidanovdima"},
 		{"Link Name Email", "#link_name_email", "Email"},
 		{"Link URL Email", "#link_url_email", "skvdmt@yandex.ru"},
-		{"Copyright", "#copyright", "Dmitry Skidanov — full stack engineer 2026"},
+		{"Copyright", "#copyright", fmt.Sprintf("Dmitry Skidanov — full stack engineer %d", time.Now().Year())},
 		{"Location", "#location", "Russian Federation, Moscow"},
 	}
 	// Тестирование.
