@@ -6,7 +6,7 @@ import (
 	"github.com/skvdmt/skvdmt-e2e-tests/internal"
 )
 
-// main Точка входа в приложение.
+// Точка входа в приложение.
 func main() {
 	a, err := internal.NewApp()
 	if err != nil {

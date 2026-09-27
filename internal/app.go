@@ -49,7 +49,7 @@ func (a *App) Start() error {
 	tests := []struct {
 		name     string
 		selector string
-		expeced  string
+		expected string
 	}{
 		{"Main header", "#main_header", "Dmitry Skidanov"},
 		{"Profession", "#profession", "Full stack engineer. Apps for high load."},
@@ -97,7 +97,7 @@ func (a *App) Start() error {
 	}
 	// Тестирование.
 	for _, t := range tests {
-		if err := a.Test(t.name, t.selector, t.expeced); err != nil {
+		if err := a.Test(t.name, t.selector, t.expected); err != nil {
 			return err
 		}
 	}
@@ -113,7 +113,7 @@ func (a *App) Test(name, selector, expected string) error {
 	}
 	if got != expected {
 		return fmt.Errorf(
-			`error: node %s; text expetted: "%s"; got "%s"`,
+			`error: node %s; text expected: "%s"; got "%s"`,
 			selector,
 			expected,
 			got,
